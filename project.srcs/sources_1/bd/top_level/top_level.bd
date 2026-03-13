@@ -1,0 +1,866 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF232922A082F5874",
+      "device": "xcku15p-ffve1517-3-e",
+      "gen_directory": "../../../../project.gen/sources_1/bd/top_level",
+      "name": "top_level",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "system_clocks": "",
+      "input_clk_buffer": "",
+      "lvds_clk": "",
+      "lvds_clk_buffer": "",
+      "chip_spi": "",
+      "system_ila": {
+        "system_ila": ""
+      },
+      "indy_power_ctl": "",
+      "controller": ""
+    },
+    "interface_ports": {
+      "init_clk": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "200000000"
+          }
+        }
+      },
+      "LVDS_CLK": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "ports": {
+      "CHIP_HSI_CLK": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "top_level_clk_wiz_0_0_clk_250",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "80000000",
+            "value_src": "ip_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "CHIP_SPI_CSN": {
+        "direction": "O"
+      },
+      "CHIP_SPI_CLK": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "top_level_chip_spi_0_0_spi_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "10000000",
+            "value_src": "const_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "CHIP_SPI_MOSI": {
+        "direction": "O"
+      },
+      "CHIP_SPI_MISO": {
+        "direction": "I"
+      },
+      "CHIP_GPIO2": {
+        "direction": "O"
+      },
+      "CHIP_RESET_N": {
+        "direction": "O"
+      },
+      "CHIP_VDDIO": {
+        "direction": "O"
+      },
+      "CHIP_VDD": {
+        "direction": "O"
+      },
+      "CHIP_VDDLVDS": {
+        "direction": "O"
+      },
+      "CHIP_VDDA": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "system_clocks": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "top_level_clk_wiz_0_0",
+        "xci_path": "ip/top_level_clk_wiz_0_0/top_level_clk_wiz_0_0.xci",
+        "inst_hier_path": "system_clocks",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "92.799"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "82.655"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "200"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "110.678"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "82.655"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "80"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLKOUT3_JITTER": {
+            "value": "76.943"
+          },
+          "CLKOUT3_PHASE_ERROR": {
+            "value": "127.216"
+          },
+          "CLKOUT3_REQUESTED_OUT_FREQ": {
+            "value": "768"
+          },
+          "CLKOUT3_USED": {
+            "value": "false"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk_250"
+          },
+          "CLK_OUT2_PORT": {
+            "value": "clk_80"
+          },
+          "CLK_OUT3_PORT": {
+            "value": "clk_768"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "6.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "6.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "15"
+          },
+          "MMCM_CLKOUT2_DIVIDE": {
+            "value": "1"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "1"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "PRIM_SOURCE": {
+            "value": "Global_buffer"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "input_clk_buffer": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "xci_name": "top_level_util_ds_buf_0_0",
+        "xci_path": "ip/top_level_util_ds_buf_0_0/top_level_util_ds_buf_0_0.xci",
+        "inst_hier_path": "input_clk_buffer"
+      },
+      "lvds_clk": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "top_level_clk_wiz_0_1",
+        "xci_path": "ip/top_level_clk_wiz_0_1/top_level_clk_wiz_0_1.xci",
+        "inst_hier_path": "lvds_clk",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "106.645"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "244.966"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "768"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "110.678"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "82.655"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "80"
+          },
+          "CLKOUT2_USED": {
+            "value": "false"
+          },
+          "CLKOUT3_JITTER": {
+            "value": "76.943"
+          },
+          "CLKOUT3_PHASE_ERROR": {
+            "value": "127.216"
+          },
+          "CLKOUT3_REQUESTED_OUT_FREQ": {
+            "value": "100.000"
+          },
+          "CLKOUT3_USED": {
+            "value": "false"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk_768"
+          },
+          "CLK_OUT2_PORT": {
+            "value": "clk_80"
+          },
+          "CLK_OUT3_PORT": {
+            "value": "clk_out3"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "122.875"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "2.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "1"
+          },
+          "MMCM_CLKOUT2_DIVIDE": {
+            "value": "1"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "16"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "1"
+          },
+          "PRIM_SOURCE": {
+            "value": "Global_buffer"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "lvds_clk_buffer": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "xci_name": "top_level_util_ds_buf_1_0",
+        "xci_path": "ip/top_level_util_ds_buf_1_0/top_level_util_ds_buf_1_0.xci",
+        "inst_hier_path": "lvds_clk_buffer",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "OBUFDS"
+          }
+        }
+      },
+      "chip_spi": {
+        "vlnv": "xilinx.com:module_ref:chip_spi:1.0",
+        "xci_name": "top_level_chip_spi_0_0",
+        "xci_path": "ip/top_level_chip_spi_0_0/top_level_chip_spi_0_0.xci",
+        "inst_hier_path": "chip_spi",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "chip_spi",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "hsi_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "80000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_clk_wiz_0_0_clk_250",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "200000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_clk_wiz_0_0_clk_250",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "free_clk": {
+            "type": "clk",
+            "direction": "O",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "constant"
+              }
+            }
+          },
+          "start": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wdata": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rdata": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "spi_clk": {
+            "type": "clk",
+            "direction": "O",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "constant"
+              }
+            }
+          },
+          "spi_mosi": {
+            "direction": "O"
+          },
+          "spi_miso": {
+            "direction": "I"
+          },
+          "spi_cs_n": {
+            "direction": "O"
+          },
+          "sim_miso": {
+            "direction": "I"
+          },
+          "sim_select": {
+            "direction": "I"
+          }
+        }
+      },
+      "system_ila": {
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "spi_cs_n": {
+            "direction": "I"
+          },
+          "CHIP_SPI_CSN": {
+            "direction": "O"
+          },
+          "free_clk": {
+            "direction": "I"
+          },
+          "spi_clk": {
+            "direction": "I"
+          },
+          "CHIP_SPI_CLK": {
+            "direction": "O"
+          },
+          "spi_mosi": {
+            "direction": "I"
+          },
+          "CHIP_SPI_MOSI": {
+            "direction": "O"
+          },
+          "CHIP_SPI_MISO": {
+            "direction": "I"
+          },
+          "spi_miso": {
+            "direction": "O"
+          },
+          "chip_resetn_in": {
+            "direction": "I"
+          },
+          "CHIP_RESET_N": {
+            "direction": "O"
+          }
+        },
+        "components": {
+          "system_ila": {
+            "vlnv": "xilinx.com:ip:system_ila:1.1",
+            "xci_name": "top_level_system_ila_0_0",
+            "xci_path": "ip/top_level_system_ila_0_0/top_level_system_ila_0_0.xci",
+            "inst_hier_path": "system_ila/system_ila",
+            "parameters": {
+              "C_DATA_DEPTH": {
+                "value": "4096"
+              },
+              "C_MON_TYPE": {
+                "value": "NATIVE"
+              },
+              "C_NUM_OF_PROBES": {
+                "value": "6"
+              }
+            }
+          }
+        },
+        "nets": {
+          "CHIP_SPI_MISO_1": {
+            "ports": [
+              "CHIP_SPI_MISO",
+              "spi_miso",
+              "system_ila/probe4"
+            ]
+          },
+          "SPI_CSN_1": {
+            "ports": [
+              "spi_cs_n",
+              "CHIP_SPI_CSN",
+              "system_ila/probe0"
+            ]
+          },
+          "chip_resetn_in_1": {
+            "ports": [
+              "chip_resetn_in",
+              "CHIP_RESET_N",
+              "system_ila/probe5"
+            ]
+          },
+          "free_clk_1": {
+            "ports": [
+              "free_clk",
+              "system_ila/probe1"
+            ]
+          },
+          "spi_clk_1": {
+            "ports": [
+              "spi_clk",
+              "CHIP_SPI_CLK",
+              "system_ila/probe2"
+            ]
+          },
+          "spi_mosi_1": {
+            "ports": [
+              "spi_mosi",
+              "CHIP_SPI_MOSI",
+              "system_ila/probe3"
+            ]
+          },
+          "sys_clks_clk_250": {
+            "ports": [
+              "clk",
+              "system_ila/clk"
+            ]
+          }
+        }
+      },
+      "indy_power_ctl": {
+        "vlnv": "xilinx.com:module_ref:indy_power_ctl:1.0",
+        "xci_name": "top_level_indy_power_ctl_0_0",
+        "xci_path": "ip/top_level_indy_power_ctl_0_0/top_level_indy_power_ctl_0_0.xci",
+        "inst_hier_path": "indy_power_ctl",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "indy_power_ctl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "resetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "200000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_clk_wiz_0_0_clk_250",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "chip_vddio": {
+            "direction": "O"
+          },
+          "chip_vdd": {
+            "direction": "O"
+          },
+          "chip_vddlvds": {
+            "direction": "O"
+          },
+          "chip_vdda": {
+            "direction": "O"
+          },
+          "chip_reset_n": {
+            "direction": "O"
+          },
+          "chip_power_ctl": {
+            "direction": "I"
+          },
+          "chip_power_state": {
+            "direction": "O"
+          }
+        }
+      },
+      "controller": {
+        "vlnv": "xilinx.com:module_ref:controller:1.0",
+        "xci_name": "top_level_controller_0_0",
+        "xci_path": "ip/top_level_controller_0_0/top_level_controller_0_0.xci",
+        "inst_hier_path": "controller",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "200000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_clk_wiz_0_0_clk_250",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "resetn_out": {
+            "direction": "O"
+          },
+          "spi_cmd": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "spi_addr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "spi_wdata": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "spi_sim_select": {
+            "direction": "O"
+          },
+          "spi_sim_miso": {
+            "direction": "O"
+          },
+          "spi_busy": {
+            "direction": "I"
+          },
+          "chip_power_ctl": {
+            "direction": "O"
+          },
+          "chip_power_state": {
+            "direction": "I"
+          },
+          "GPIO2": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "init_clk_1": {
+        "interface_ports": [
+          "init_clk",
+          "input_clk_buffer/CLK_IN_D"
+        ]
+      },
+      "lvds_clk_buffer_CLK_OUT_D3": {
+        "interface_ports": [
+          "LVDS_CLK",
+          "lvds_clk_buffer/CLK_OUT_D3"
+        ]
+      }
+    },
+    "nets": {
+      "CHIP_SPI_CSN_1": {
+        "ports": [
+          "chip_spi/spi_cs_n",
+          "system_ila/spi_cs_n"
+        ]
+      },
+      "CHIP_SPI_MISO_1": {
+        "ports": [
+          "CHIP_SPI_MISO",
+          "system_ila/CHIP_SPI_MISO"
+        ]
+      },
+      "chip_spi_busy": {
+        "ports": [
+          "chip_spi/busy",
+          "controller/spi_busy"
+        ]
+      },
+      "chip_spi_free_clk": {
+        "ports": [
+          "chip_spi/free_clk",
+          "system_ila/free_clk"
+        ]
+      },
+      "chip_spi_spi_clk": {
+        "ports": [
+          "chip_spi/spi_clk",
+          "system_ila/spi_clk"
+        ]
+      },
+      "controller_0_GPIO2": {
+        "ports": [
+          "controller/GPIO2",
+          "CHIP_GPIO2"
+        ]
+      },
+      "controller_0_spi_addr": {
+        "ports": [
+          "controller/spi_addr",
+          "chip_spi/addr"
+        ]
+      },
+      "controller_0_spi_cmd": {
+        "ports": [
+          "controller/spi_cmd",
+          "chip_spi/start"
+        ]
+      },
+      "controller_0_spi_sim_miso": {
+        "ports": [
+          "controller/spi_sim_miso",
+          "chip_spi/sim_miso"
+        ]
+      },
+      "controller_0_spi_sim_select": {
+        "ports": [
+          "controller/spi_sim_select",
+          "chip_spi/sim_select"
+        ]
+      },
+      "controller_0_spi_wdata": {
+        "ports": [
+          "controller/spi_wdata",
+          "chip_spi/wdata"
+        ]
+      },
+      "controller_chip_power_ctl": {
+        "ports": [
+          "controller/chip_power_ctl",
+          "indy_power_ctl/chip_power_ctl"
+        ]
+      },
+      "controller_resetn_out": {
+        "ports": [
+          "controller/resetn_out",
+          "chip_spi/resetn",
+          "indy_power_ctl/resetn"
+        ]
+      },
+      "indy_power_ctl_chip_power_state": {
+        "ports": [
+          "indy_power_ctl/chip_power_state",
+          "controller/chip_power_state"
+        ]
+      },
+      "indy_power_ctl_chip_reset_n": {
+        "ports": [
+          "indy_power_ctl/chip_reset_n",
+          "system_ila/chip_resetn_in"
+        ]
+      },
+      "indy_power_ctl_chip_vdd": {
+        "ports": [
+          "indy_power_ctl/chip_vdd",
+          "CHIP_VDD"
+        ]
+      },
+      "indy_power_ctl_chip_vdda": {
+        "ports": [
+          "indy_power_ctl/chip_vdda",
+          "CHIP_VDDA"
+        ]
+      },
+      "indy_power_ctl_chip_vddio": {
+        "ports": [
+          "indy_power_ctl/chip_vddio",
+          "CHIP_VDDIO"
+        ]
+      },
+      "indy_power_ctl_chip_vddlvds": {
+        "ports": [
+          "indy_power_ctl/chip_vddlvds",
+          "CHIP_VDDLVDS"
+        ]
+      },
+      "lvds_clk_clk_768": {
+        "ports": [
+          "lvds_clk/clk_768",
+          "lvds_clk_buffer/OBUF_IN"
+        ]
+      },
+      "spi_mosi_1": {
+        "ports": [
+          "chip_spi/spi_mosi",
+          "system_ila/spi_mosi"
+        ]
+      },
+      "sys_clks_clk_80": {
+        "ports": [
+          "system_clocks/clk_80",
+          "CHIP_HSI_CLK",
+          "chip_spi/hsi_clk"
+        ]
+      },
+      "sys_clks_clk_250": {
+        "ports": [
+          "system_clocks/clk_250",
+          "chip_spi/clk",
+          "system_ila/clk",
+          "indy_power_ctl/clk",
+          "controller/clk"
+        ]
+      },
+      "system_ila_CHIP_RESET_N": {
+        "ports": [
+          "system_ila/CHIP_RESET_N",
+          "CHIP_RESET_N"
+        ]
+      },
+      "system_ila_CHIP_SPI_CLK": {
+        "ports": [
+          "system_ila/CHIP_SPI_CLK",
+          "CHIP_SPI_CLK"
+        ]
+      },
+      "system_ila_CHIP_SPI_MOSI": {
+        "ports": [
+          "system_ila/CHIP_SPI_MOSI",
+          "CHIP_SPI_MOSI"
+        ]
+      },
+      "system_ila_EXT_CHIP_SPI_CSN": {
+        "ports": [
+          "system_ila/CHIP_SPI_CSN",
+          "CHIP_SPI_CSN"
+        ]
+      },
+      "system_ila_spi_miso": {
+        "ports": [
+          "system_ila/spi_miso",
+          "chip_spi/spi_miso"
+        ]
+      },
+      "util_ds_buf_0_IBUF_OUT": {
+        "ports": [
+          "input_clk_buffer/IBUF_OUT",
+          "system_clocks/clk_in1",
+          "lvds_clk/clk_in1"
+        ]
+      }
+    }
+  }
+}

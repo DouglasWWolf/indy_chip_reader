@@ -1,0 +1,54 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-600,-234",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_spi_cs_n -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_CHIP_SPI_CSN -pg 1 -lvl 2 -x 280 -y 20 -defaultsOSRD
+preplace port port-id_free_clk -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_spi_clk -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_CHIP_SPI_CLK -pg 1 -lvl 2 -x 280 -y 260 -defaultsOSRD
+preplace port port-id_spi_mosi -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_CHIP_SPI_MOSI -pg 1 -lvl 2 -x 280 -y 280 -defaultsOSRD
+preplace port port-id_CHIP_SPI_MISO -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_spi_miso -pg 1 -lvl 2 -x 280 -y 300 -defaultsOSRD
+preplace port port-id_chip_resetn_in -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_CHIP_RESET_N -pg 1 -lvl 2 -x 280 -y 320 -defaultsOSRD
+preplace inst system_ila -pg 1 -lvl 1 -x 170 -y 80 -defaultsOSRD -pinDir clk left -pinY clk 0L -pinBusDir probe0 left -pinBusY probe0 20L -pinBusDir probe1 left -pinBusY probe1 40L -pinBusDir probe2 left -pinBusY probe2 60L -pinBusDir probe3 left -pinBusY probe3 80L -pinBusDir probe4 left -pinBusY probe4 100L -pinBusDir probe5 left -pinBusY probe5 120L
+preplace netloc sys_clks_clk_250 1 0 1 NJ 80
+preplace netloc SPI_CSN_1 1 0 2 80 20 NJ
+preplace netloc free_clk_1 1 0 1 NJ 120
+preplace netloc spi_clk_1 1 0 2 80 260 NJ
+preplace netloc spi_mosi_1 1 0 2 60 280 NJ
+preplace netloc CHIP_SPI_MISO_1 1 0 2 40 300 NJ
+preplace netloc chip_resetn_in_1 1 0 2 20 320 NJ
+levelinfo -pg 1 0 170 280
+pagesize -pg 1 -db -bbox -sgen -160 0 440 340
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-587,-194",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace portBus CHIP_SPI_CSN -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace portBus CHIP_SPI_CLK -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace portBus CHIP_SPI_MOSI -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace portBus CHIP_SPI_MISO -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace portBus CHIP_RESET_N -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 1 -x 110 -y 110 -defaultsOSRD
+preplace netloc sys_clks_clk_250 1 0 1 NJ 50
+preplace netloc chip_spi_spi_cs_n 1 0 1 NJ 70
+preplace netloc chip_spi_spi_clk 1 0 1 NJ 90
+preplace netloc chip_spi_spi_mosi 1 0 1 NJ 110
+preplace netloc CHIP_SPI_MISO_1 1 0 1 NJ 130
+preplace netloc controller_0_CHIP_RESET_N 1 0 1 NJ 150
+levelinfo -pg 1 0 110 210
+pagesize -pg 1 -db -bbox -sgen -180 0 210 220
+"
+}
+

@@ -1,0 +1,86 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-312,-275",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port init_clk -pg 1 -lvl 0 -x 0 -y 600 -defaultsOSRD
+preplace port LVDS_CLK -pg 1 -lvl 5 -x 1020 -y 650 -defaultsOSRD
+preplace port port-id_CHIP_HSI_CLK -pg 1 -lvl 5 -x 1020 -y 40 -defaultsOSRD
+preplace port port-id_CHIP_SPI_CSN -pg 1 -lvl 5 -x 1020 -y 120 -defaultsOSRD
+preplace port port-id_CHIP_SPI_CLK -pg 1 -lvl 5 -x 1020 -y 100 -defaultsOSRD
+preplace port port-id_CHIP_SPI_MOSI -pg 1 -lvl 5 -x 1020 -y 160 -defaultsOSRD
+preplace port port-id_CHIP_SPI_MISO -pg 1 -lvl 5 -x 1020 -y 140 -defaultsOSRD -right
+preplace port port-id_CHIP_GPIO2 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD -left
+preplace port port-id_CHIP_RESET_N -pg 1 -lvl 5 -x 1020 -y 180 -defaultsOSRD
+preplace port port-id_CHIP_VDDIO -pg 1 -lvl 5 -x 1020 -y 490 -defaultsOSRD
+preplace port port-id_CHIP_VDD -pg 1 -lvl 5 -x 1020 -y 510 -defaultsOSRD
+preplace port port-id_CHIP_VDDLVDS -pg 1 -lvl 5 -x 1020 -y 530 -defaultsOSRD
+preplace port port-id_CHIP_VDDA -pg 1 -lvl 5 -x 1020 -y 550 -defaultsOSRD
+preplace inst system_clocks -pg 1 -lvl 3 -x 540 -y 320 -swap {0 2 1} -defaultsOSRD -pinDir clk_in1 left -pinY clk_in1 20L -pinDir clk_250 right -pinY clk_250 20R -pinDir clk_80 right -pinY clk_80 0R
+preplace inst input_clk_buffer -pg 1 -lvl 2 -x 200 -y 600 -defaultsOSRD -pinDir CLK_IN_D left -pinY CLK_IN_D 0L -pinBusDir IBUF_OUT right -pinBusY IBUF_OUT 0R
+preplace inst lvds_clk -pg 1 -lvl 3 -x 540 -y 650 -defaultsOSRD -pinDir clk_in1 left -pinY clk_in1 0L -pinDir clk_768 right -pinY clk_768 0R
+preplace inst lvds_clk_buffer -pg 1 -lvl 4 -x 860 -y 650 -defaultsOSRD -pinDir CLK_OUT_D3 right -pinY CLK_OUT_D3 0R -pinBusDir OBUF_IN left -pinBusY OBUF_IN 0L
+preplace inst chip_spi -pg 1 -lvl 3 -x 540 -y 60 -swap {0 14 13 7 2 5 1 9 4 10 12 11 3 6 8} -defaultsOSRD -pinDir hsi_clk right -pinY hsi_clk 0R -pinDir clk left -pinY clk 140L -pinDir resetn left -pinY resetn 120L -pinDir free_clk right -pinY free_clk 60R -pinBusDir start left -pinBusY start 20L -pinBusDir addr left -pinBusY addr 60L -pinBusDir wdata left -pinBusY wdata 0L -pinBusDir rdata right -pinBusY rdata 80R -pinDir busy left -pinY busy 40L -pinDir spi_clk right -pinY spi_clk 100R -pinDir spi_mosi right -pinY spi_mosi 140R -pinDir spi_miso right -pinY spi_miso 120R -pinDir spi_cs_n right -pinY spi_cs_n 40R -pinDir sim_miso left -pinY sim_miso 80L -pinDir sim_select left -pinY sim_select 100L
+preplace inst system_ila -pg 1 -lvl 4 -x 860 -y 100 -swap {9 0 5 1 3 2 6 8 7 4 10 11} -defaultsOSRD -pinDir clk left -pinY clk 160L -pinDir spi_cs_n left -pinY spi_cs_n 0L -pinDir CHIP_SPI_CSN right -pinY CHIP_SPI_CSN 20R -pinDir free_clk left -pinY free_clk 20L -pinDir spi_clk left -pinY spi_clk 60L -pinDir CHIP_SPI_CLK right -pinY CHIP_SPI_CLK 0R -pinDir spi_mosi left -pinY spi_mosi 100L -pinDir CHIP_SPI_MOSI right -pinY CHIP_SPI_MOSI 60R -pinDir CHIP_SPI_MISO right -pinY CHIP_SPI_MISO 40R -pinDir spi_miso left -pinY spi_miso 80L -pinDir chip_resetn_in left -pinY chip_resetn_in 340L -pinDir CHIP_RESET_N right -pinY CHIP_RESET_N 80R
+preplace inst indy_power_ctl -pg 1 -lvl 3 -x 540 -y 440 -swap {1 0 3 4 5 6 2 7 8} -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir resetn left -pinY resetn 0L -pinDir chip_vddio right -pinY chip_vddio 50R -pinDir chip_vdd right -pinY chip_vdd 70R -pinDir chip_vddlvds right -pinY chip_vddlvds 90R -pinDir chip_vdda right -pinY chip_vdda 110R -pinDir chip_reset_n right -pinY chip_reset_n 0R -pinDir chip_power_ctl left -pinY chip_power_ctl 40L -pinDir chip_power_state left -pinY chip_power_state 60L
+preplace inst controller -pg 1 -lvl 2 -x 200 -y 60 -swap {7 6 1 3 0 5 4 2 8 9 10} -defaultsOSRD -pinDir clk right -pinY clk 140R -pinDir resetn_out right -pinY resetn_out 120R -pinBusDir spi_cmd right -pinBusY spi_cmd 20R -pinBusDir spi_addr right -pinBusY spi_addr 60R -pinBusDir spi_wdata right -pinBusY spi_wdata 0R -pinDir spi_sim_select right -pinY spi_sim_select 100R -pinDir spi_sim_miso right -pinY spi_sim_miso 80R -pinDir spi_busy right -pinY spi_busy 40R -pinDir chip_power_ctl right -pinY chip_power_ctl 420R -pinDir chip_power_state right -pinY chip_power_state 440R -pinDir GPIO2 left -pinY GPIO2 0L
+preplace netloc CHIP_SPI_CSN_1 1 3 1 N 100
+preplace netloc CHIP_SPI_MISO_1 1 4 1 NJ 140
+preplace netloc chip_spi_busy 1 2 1 N 100
+preplace netloc chip_spi_free_clk 1 3 1 N 120
+preplace netloc chip_spi_spi_clk 1 3 1 N 160
+preplace netloc controller_0_GPIO2 1 0 2 N 60 N
+preplace netloc controller_0_spi_addr 1 2 1 N 120
+preplace netloc controller_0_spi_cmd 1 2 1 N 80
+preplace netloc controller_0_spi_sim_miso 1 2 1 N 140
+preplace netloc controller_0_spi_sim_select 1 2 1 N 160
+preplace netloc controller_0_spi_wdata 1 2 1 N 60
+preplace netloc controller_chip_power_ctl 1 2 1 N 480
+preplace netloc controller_resetn_out 1 2 1 380 180n
+preplace netloc indy_power_ctl_chip_power_state 1 2 1 N 500
+preplace netloc indy_power_ctl_chip_reset_n 1 3 1 N 440
+preplace netloc indy_power_ctl_chip_vdd 1 3 2 NJ 510 NJ
+preplace netloc indy_power_ctl_chip_vdda 1 3 2 NJ 550 NJ
+preplace netloc indy_power_ctl_chip_vddio 1 3 2 NJ 490 NJ
+preplace netloc indy_power_ctl_chip_vddlvds 1 3 2 NJ 530 NJ
+preplace netloc lvds_clk_clk_768 1 3 1 NJ 650
+preplace netloc spi_mosi_1 1 3 1 N 200
+preplace netloc sys_clks_clk_80 1 3 2 720 40 NJ
+preplace netloc sys_clks_clk_250 1 2 2 340 260 700
+preplace netloc system_ila_CHIP_RESET_N 1 4 1 NJ 180
+preplace netloc system_ila_CHIP_SPI_CLK 1 4 1 NJ 100
+preplace netloc system_ila_CHIP_SPI_MOSI 1 4 1 NJ 160
+preplace netloc system_ila_EXT_CHIP_SPI_CSN 1 4 1 NJ 120
+preplace netloc system_ila_spi_miso 1 3 1 N 180
+preplace netloc util_ds_buf_0_IBUF_OUT 1 2 1 360 340n
+preplace netloc init_clk_1 1 0 2 NJ 600 N
+preplace netloc lvds_clk_buffer_CLK_OUT_D3 1 4 1 NJ 650
+levelinfo -pg 1 0 40 200 540 860 1020
+pagesize -pg 1 -db -bbox -sgen -140 0 1180 710
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-204,-9",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port init_clk -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port LVDS_CLK -pg 1 -lvl 4 -x 780 -y 180 -defaultsOSRD
+preplace port port-id_HSI_CLK -pg 1 -lvl 4 -x 780 -y 80 -defaultsOSRD
+preplace inst sys_clks -pg 1 -lvl 2 -x 370 -y 70 -defaultsOSRD
+preplace inst input_clk_buffer -pg 1 -lvl 1 -x 150 -y 70 -defaultsOSRD
+preplace inst lvds_clk -pg 1 -lvl 2 -x 370 -y 180 -defaultsOSRD
+preplace inst lvds_clk_buffer -pg 1 -lvl 3 -x 610 -y 200 -defaultsOSRD
+preplace inst chip_spi -pg 1 -lvl 3 -x 610 -y 20 -defaultsOSRD
+preplace netloc util_ds_buf_0_IBUF_OUT 1 1 1 280 70n
+preplace netloc sys_clks_clk_80 1 2 2 470 260 750
+preplace netloc lvds_clk_clk_768 1 2 1 460 180n
+preplace netloc init_clk_1 1 0 1 N 70
+preplace netloc lvds_clk_buffer_CLK_OUT_D3 1 3 1 760 180n
+levelinfo -pg 1 0 150 370 610 780
+pagesize -pg 1 -db -bbox -sgen -100 -120 910 500
+"
+}
+0
