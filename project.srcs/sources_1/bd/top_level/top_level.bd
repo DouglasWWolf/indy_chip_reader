@@ -15,12 +15,12 @@
       "input_clk_buffer": "",
       "lvds_clk": "",
       "lvds_clk_buffer": "",
-      "chip_spi": "",
       "system_ila": {
         "system_ila": ""
       },
       "indy_power_ctl": "",
-      "controller": ""
+      "controller": "",
+      "chip_spi": ""
     },
     "interface_ports": {
       "init_clk": {
@@ -306,123 +306,6 @@
           }
         }
       },
-      "chip_spi": {
-        "vlnv": "xilinx.com:module_ref:chip_spi:1.0",
-        "xci_name": "top_level_chip_spi_0_0",
-        "xci_path": "ip/top_level_chip_spi_0_0/top_level_chip_spi_0_0.xci",
-        "inst_hier_path": "chip_spi",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "chip_spi",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "hsi_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "80000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "top_level_clk_wiz_0_0_clk_250",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "200000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "top_level_clk_wiz_0_0_clk_250",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "resetn": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "free_clk": {
-            "type": "clk",
-            "direction": "O",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "10000000",
-                "value_src": "constant"
-              }
-            }
-          },
-          "start": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wdata": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "rdata": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "busy": {
-            "direction": "O"
-          },
-          "spi_clk": {
-            "type": "clk",
-            "direction": "O",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "10000000",
-                "value_src": "constant"
-              }
-            }
-          },
-          "spi_mosi": {
-            "direction": "O"
-          },
-          "spi_miso": {
-            "direction": "I"
-          },
-          "spi_cs_n": {
-            "direction": "O"
-          },
-          "sim_miso": {
-            "direction": "I"
-          },
-          "sim_select": {
-            "direction": "I"
-          }
-        }
-      },
       "system_ila": {
         "ports": {
           "clk": {
@@ -664,6 +547,123 @@
             "direction": "O"
           }
         }
+      },
+      "chip_spi": {
+        "vlnv": "xilinx.com:module_ref:chip_spi:1.0",
+        "xci_name": "top_level_chip_spi_0_0",
+        "xci_path": "ip/top_level_chip_spi_0_0/top_level_chip_spi_0_0.xci",
+        "inst_hier_path": "chip_spi",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "chip_spi",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "hsi_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "80000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_clk_wiz_0_0_clk_250",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "200000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_clk_wiz_0_0_clk_250",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "free_clk": {
+            "type": "clk",
+            "direction": "O",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "constant"
+              }
+            }
+          },
+          "start": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wdata": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rdata": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "spi_clk": {
+            "type": "clk",
+            "direction": "O",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "constant"
+              }
+            }
+          },
+          "spi_mosi": {
+            "direction": "O"
+          },
+          "spi_miso": {
+            "direction": "I"
+          },
+          "spi_cs_n": {
+            "direction": "O"
+          },
+          "sim_miso": {
+            "direction": "I"
+          },
+          "sim_select": {
+            "direction": "I"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -756,8 +756,8 @@
       "controller_resetn_out": {
         "ports": [
           "controller/resetn_out",
-          "chip_spi/resetn",
-          "indy_power_ctl/resetn"
+          "indy_power_ctl/resetn",
+          "chip_spi/resetn"
         ]
       },
       "indy_power_ctl_chip_power_state": {
@@ -818,10 +818,10 @@
       "sys_clks_clk_250": {
         "ports": [
           "system_clocks/clk_250",
-          "chip_spi/clk",
           "system_ila/clk",
           "indy_power_ctl/clk",
-          "controller/clk"
+          "controller/clk",
+          "chip_spi/clk"
         ]
       },
       "system_ila_CHIP_RESET_N": {
