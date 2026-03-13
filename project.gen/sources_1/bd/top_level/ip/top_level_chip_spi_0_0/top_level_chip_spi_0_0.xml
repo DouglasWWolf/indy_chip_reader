@@ -550,13 +550,6 @@
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
-    <spirit:modelParameters>
-      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
-        <spirit:name>FREQ_HZ</spirit:name>
-        <spirit:displayName>Freq Hz</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FREQ_HZ">250000000</spirit:value>
-      </spirit:modelParameter>
-    </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
@@ -567,11 +560,6 @@
   </spirit:choices>
   <spirit:description>xilinx.com:module_ref:chip_spi:1.0</spirit:description>
   <spirit:parameters>
-    <spirit:parameter>
-      <spirit:name>FREQ_HZ</spirit:name>
-      <spirit:displayName>Freq Hz</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FREQ_HZ">250000000</spirit:value>
-    </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">top_level_chip_spi_0_0</spirit:value>
