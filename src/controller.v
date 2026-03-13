@@ -2,6 +2,7 @@ module controller
 (
     input clk,
 
+    // Here we are providing a reset signal to other modules
     output reg resetn_out,
 
     // These drive the SPI module
@@ -21,9 +22,16 @@ module controller
     output GPIO2
 );
 
+// This probably isn't neccessary any more
 assign GPIO2          = 1;
+
+// We will always be reading register 0
 assign spi_addr       = 0;
+
+// We're not writing to the chip so this is irrelevant
 assign spi_wdata      = 0;
+
+// We don't have a chip-simulator attached to the chip_spi
 assign spi_sim_select = 0;
 assign spi_sim_miso   = 0;
 
@@ -58,9 +66,9 @@ always @(posedge clk) begin
                 fsm_state      <= 2;
             end
 
-        // Once the power comes on, release resetn_out
+        // Once the power comes on, waste a little time
         2:  if (chip_power_state == 1) begin
-                sleep      <= 100;
+                sleep      <= 100000;
                 fsm_state  <= 3;
             end
 
