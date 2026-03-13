@@ -31,8 +31,8 @@ assign GPIO2          = 1;
 // Enable the level-shifter between the FPGA and the sensor-chip
 assign LVL_TRSL_OE_N  = 0;
 
-// We will always be reading register 0
-assign spi_addr       = 0;
+// We will always be reading register 0x40
+assign spi_addr       = 32'h40;
 
 // We're not writing to the chip so this is irrelevant
 assign spi_wdata      = 0;

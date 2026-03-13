@@ -14,7 +14,7 @@
 #
 set_property -dict {PACKAGE_PIN G16  IOSTANDARD LVDS}   [get_ports init_clk_clk_n]
 set_property -dict {PACKAGE_PIN G17  IOSTANDARD LVDS}   [get_ports init_clk_clk_p]
-create_clock -period 5.000 -name sysclk200              [get_ports init_clk_clk_p]
+#create_clock -period 5.000 -name sysclk200              [get_ports init_clk_clk_p]
 #set_clock_groups -name group_sysclk200 -asynchronous -group [get_clocks sysclk200]
 
 
@@ -52,8 +52,8 @@ set_property -dict {PACKAGE_PIN A18   IOSTANDARD LVCMOS18  SLEW SLOW} [get_ports
 #
 # LVDS input clock output to sensor-chip. 768 MHz
 #
-set_property -dict {PACKAGE_PIN F22  IOSTANDARD LVDS  DATA_RATE DDR  LVDS_PRE_EMPHASIS FALSE } [get_ports LVDS_CLK_clk_n];  # IO Bank 70     Board signal name: CLK512_N
-set_property -dict {PACKAGE_PIN G22  IOSTANDARD LVDS  DATA_RATE DDR  LVDS_PRE_EMPHASIS FALSE } [get_ports LVDS_CLK_clk_p];  # IO Bank 70     Board signal name: CLK512_P
+#set_property -dict {PACKAGE_PIN F22  IOSTANDARD LVDS  DATA_RATE DDR  LVDS_PRE_EMPHASIS FALSE } [get_ports LVDS_CLK_clk_n];  # IO Bank 70     Board signal name: CLK512_N
+#set_property -dict {PACKAGE_PIN G22  IOSTANDARD LVDS  DATA_RATE DDR  LVDS_PRE_EMPHASIS FALSE } [get_ports LVDS_CLK_clk_p];  # IO Bank 70     Board signal name: CLK512_P
 
 
 
