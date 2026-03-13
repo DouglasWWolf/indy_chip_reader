@@ -67,7 +67,7 @@ always @(posedge clk) begin
         // Start a register read on the SPI
         3:  if (sleep == 0) begin
                 spi_cmd   <= 1;
-                fsm_state <= 3;
+                fsm_state <= 4;
             end
 
         // When the register read completes, do it again, forever
