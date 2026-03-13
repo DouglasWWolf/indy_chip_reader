@@ -65,3 +65,9 @@ set_property -dict {PACKAGE_PIN G22  IOSTANDARD LVDS  DATA_RATE DDR  LVDS_PRE_EM
 set_property -dict {PACKAGE_PIN G11    IOSTANDARD LVCMOS18   SLEW SLOW } [get_ports CHIP_GPIO2];  # IO Bank 94
 #set_property -dict {PACKAGE_PIN G10    IOSTANDARD LVCMOS18   SLEW SLOW } [get_ports CHIP_GPIO[3]];  # IO Bank 94
 #set_property -dict {PACKAGE_PIN G12    IOSTANDARD LVCMOS18   SLEW SLOW } [get_ports CHIP_GPIO[4]];  # IO Bank 94
+
+
+#
+#  This enables a level translator for SPI pins on the sensor-chip
+#
+set_property -dict {PACKAGE_PIN A4     IOSTANDARD LVCMOS18   SLEW SLOW } [get_ports LVL_TRSL_OE_N];  # IO Bank 90

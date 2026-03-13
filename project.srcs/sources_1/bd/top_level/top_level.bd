@@ -7,20 +7,16 @@
       "name": "top_level",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2021.1",
-      "validated": "true"
+      "tool_version": "2021.1"
     },
     "design_tree": {
       "system_clocks": "",
-      "input_clk_buffer": "",
-      "lvds_clk": "",
-      "lvds_clk_buffer": "",
       "system_ila": {
         "system_ila": ""
       },
       "indy_power_ctl": "",
-      "controller": "",
-      "chip_spi": ""
+      "chip_spi": "",
+      "controller": ""
     },
     "interface_ports": {
       "init_clk": {
@@ -28,27 +24,8 @@
         "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
         "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
         "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "200000000"
-          }
-        }
-      },
-      "LVDS_CLK": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
-        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
-        "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
           }
         }
       }
@@ -56,58 +33,14 @@
     "ports": {
       "CHIP_HSI_CLK": {
         "type": "clk",
-        "direction": "O",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "top_level_clk_wiz_0_0_clk_250",
-            "value_src": "ip_prop"
-          },
-          "FREQ_HZ": {
-            "value": "80000000",
-            "value_src": "ip_prop"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "ip_prop"
-          }
-        }
+        "direction": "O"
       },
       "CHIP_SPI_CSN": {
         "direction": "O"
       },
       "CHIP_SPI_CLK": {
         "type": "clk",
-        "direction": "O",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "top_level_chip_spi_0_0_spi_clk",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "10000000",
-            "value_src": "const_prop"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
-          }
-        }
+        "direction": "O"
       },
       "CHIP_SPI_MOSI": {
         "direction": "O"
@@ -131,6 +64,9 @@
         "direction": "O"
       },
       "CHIP_VDDA": {
+        "direction": "O"
+      },
+      "LVL_TRSL_OE_N": {
         "direction": "O"
       }
     },
@@ -202,107 +138,13 @@
             "value": "2"
           },
           "PRIM_SOURCE": {
-            "value": "Global_buffer"
+            "value": "Differential_clock_capable_pin"
           },
           "USE_LOCKED": {
             "value": "false"
           },
           "USE_RESET": {
             "value": "false"
-          }
-        }
-      },
-      "input_clk_buffer": {
-        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-        "xci_name": "top_level_util_ds_buf_0_0",
-        "xci_path": "ip/top_level_util_ds_buf_0_0/top_level_util_ds_buf_0_0.xci",
-        "inst_hier_path": "input_clk_buffer"
-      },
-      "lvds_clk": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "top_level_clk_wiz_0_1",
-        "xci_path": "ip/top_level_clk_wiz_0_1/top_level_clk_wiz_0_1.xci",
-        "inst_hier_path": "lvds_clk",
-        "parameters": {
-          "CLKOUT1_JITTER": {
-            "value": "106.645"
-          },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "244.966"
-          },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "768"
-          },
-          "CLKOUT2_JITTER": {
-            "value": "110.678"
-          },
-          "CLKOUT2_PHASE_ERROR": {
-            "value": "82.655"
-          },
-          "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "80"
-          },
-          "CLKOUT2_USED": {
-            "value": "false"
-          },
-          "CLKOUT3_JITTER": {
-            "value": "76.943"
-          },
-          "CLKOUT3_PHASE_ERROR": {
-            "value": "127.216"
-          },
-          "CLKOUT3_REQUESTED_OUT_FREQ": {
-            "value": "100.000"
-          },
-          "CLKOUT3_USED": {
-            "value": "false"
-          },
-          "CLK_OUT1_PORT": {
-            "value": "clk_768"
-          },
-          "CLK_OUT2_PORT": {
-            "value": "clk_80"
-          },
-          "CLK_OUT3_PORT": {
-            "value": "clk_out3"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "122.875"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "2.000"
-          },
-          "MMCM_CLKOUT1_DIVIDE": {
-            "value": "1"
-          },
-          "MMCM_CLKOUT2_DIVIDE": {
-            "value": "1"
-          },
-          "MMCM_DIVCLK_DIVIDE": {
-            "value": "16"
-          },
-          "NUM_OUT_CLKS": {
-            "value": "1"
-          },
-          "PRIM_SOURCE": {
-            "value": "Global_buffer"
-          },
-          "USE_LOCKED": {
-            "value": "false"
-          },
-          "USE_RESET": {
-            "value": "false"
-          }
-        }
-      },
-      "lvds_clk_buffer": {
-        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-        "xci_name": "top_level_util_ds_buf_1_0",
-        "xci_path": "ip/top_level_util_ds_buf_1_0/top_level_util_ds_buf_1_0.xci",
-        "inst_hier_path": "lvds_clk_buffer",
-        "parameters": {
-          "C_BUF_TYPE": {
-            "value": "OBUFDS"
           }
         }
       },
@@ -481,73 +323,6 @@
           }
         }
       },
-      "controller": {
-        "vlnv": "xilinx.com:module_ref:controller:1.0",
-        "xci_name": "top_level_controller_0_0",
-        "xci_path": "ip/top_level_controller_0_0/top_level_controller_0_0.xci",
-        "inst_hier_path": "controller",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "controller",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "200000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "top_level_clk_wiz_0_0_clk_250",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "resetn_out": {
-            "direction": "O"
-          },
-          "spi_cmd": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "spi_addr": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "spi_wdata": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "spi_sim_select": {
-            "direction": "O"
-          },
-          "spi_sim_miso": {
-            "direction": "O"
-          },
-          "spi_busy": {
-            "direction": "I"
-          },
-          "chip_power_ctl": {
-            "direction": "O"
-          },
-          "chip_power_state": {
-            "direction": "I"
-          },
-          "GPIO2": {
-            "direction": "O"
-          }
-        }
-      },
       "chip_spi": {
         "vlnv": "xilinx.com:module_ref:chip_spi:1.0",
         "xci_name": "top_level_chip_spi_0_0",
@@ -664,19 +439,69 @@
             "direction": "I"
           }
         }
+      },
+      "controller": {
+        "vlnv": "xilinx.com:module_ref:controller:1.0",
+        "xci_name": "top_level_controller_0_0",
+        "xci_path": "ip/top_level_controller_0_0/top_level_controller_0_0.xci",
+        "inst_hier_path": "controller",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "resetn_out": {
+            "direction": "O"
+          },
+          "spi_cmd": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "spi_addr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "spi_wdata": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "spi_sim_select": {
+            "direction": "O"
+          },
+          "spi_sim_miso": {
+            "direction": "O"
+          },
+          "spi_busy": {
+            "direction": "I"
+          },
+          "chip_power_ctl": {
+            "direction": "O"
+          },
+          "chip_power_state": {
+            "direction": "I"
+          },
+          "GPIO2": {
+            "direction": "O"
+          },
+          "LVL_TRSL_OE_N": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
       "init_clk_1": {
         "interface_ports": [
           "init_clk",
-          "input_clk_buffer/CLK_IN_D"
-        ]
-      },
-      "lvds_clk_buffer_CLK_OUT_D3": {
-        "interface_ports": [
-          "LVDS_CLK",
-          "lvds_clk_buffer/CLK_OUT_D3"
+          "system_clocks/CLK_IN1_D"
         ]
       }
     },
@@ -747,6 +572,12 @@
           "chip_spi/wdata"
         ]
       },
+      "controller_LVL_TRSL_OE_N": {
+        "ports": [
+          "controller/LVL_TRSL_OE_N",
+          "LVL_TRSL_OE_N"
+        ]
+      },
       "controller_chip_power_ctl": {
         "ports": [
           "controller/chip_power_ctl",
@@ -796,12 +627,6 @@
           "CHIP_VDDLVDS"
         ]
       },
-      "lvds_clk_clk_768": {
-        "ports": [
-          "lvds_clk/clk_768",
-          "lvds_clk_buffer/OBUF_IN"
-        ]
-      },
       "spi_mosi_1": {
         "ports": [
           "chip_spi/spi_mosi",
@@ -820,8 +645,8 @@
           "system_clocks/clk_250",
           "system_ila/clk",
           "indy_power_ctl/clk",
-          "controller/clk",
-          "chip_spi/clk"
+          "chip_spi/clk",
+          "controller/clk"
         ]
       },
       "system_ila_CHIP_RESET_N": {
@@ -852,13 +677,6 @@
         "ports": [
           "system_ila/spi_miso",
           "chip_spi/spi_miso"
-        ]
-      },
-      "util_ds_buf_0_IBUF_OUT": {
-        "ports": [
-          "input_clk_buffer/IBUF_OUT",
-          "system_clocks/clk_in1",
-          "lvds_clk/clk_in1"
         ]
       }
     }

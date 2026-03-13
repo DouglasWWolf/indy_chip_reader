@@ -19,11 +19,17 @@ module controller
 
 
     // Drives the chip's GPIO2 pin
-    output GPIO2
+    output GPIO2,
+
+    // Enable line for level-translator between the FPGA and the sensor-chip
+    output LVL_TRSL_OE_N     
 );
 
 // This probably isn't neccessary any more
 assign GPIO2          = 1;
+
+// Enable the level-shifter between the FPGA and the sensor-chip
+assign LVL_TRSL_OE_N  = 0;
 
 // We will always be reading register 0
 assign spi_addr       = 0;
