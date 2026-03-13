@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-//Date        : Thu Mar 12 21:57:39 2026
+//Date        : Fri Mar 13 11:47:18 2026
 //Host        : wolf-super-server running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_level_wrapper.bd
 //Design      : top_level_wrapper
@@ -21,8 +21,7 @@ module top_level_wrapper
     CHIP_VDDA,
     CHIP_VDDIO,
     CHIP_VDDLVDS,
-    LVDS_CLK_clk_n,
-    LVDS_CLK_clk_p,
+    LVL_TRSL_OE_N,
     init_clk_clk_n,
     init_clk_clk_p);
   output CHIP_GPIO2;
@@ -36,10 +35,9 @@ module top_level_wrapper
   output CHIP_VDDA;
   output CHIP_VDDIO;
   output CHIP_VDDLVDS;
-  output [0:0]LVDS_CLK_clk_n;
-  output [0:0]LVDS_CLK_clk_p;
-  input [0:0]init_clk_clk_n;
-  input [0:0]init_clk_clk_p;
+  output LVL_TRSL_OE_N;
+  input init_clk_clk_n;
+  input init_clk_clk_p;
 
   wire CHIP_GPIO2;
   wire CHIP_HSI_CLK;
@@ -52,10 +50,9 @@ module top_level_wrapper
   wire CHIP_VDDA;
   wire CHIP_VDDIO;
   wire CHIP_VDDLVDS;
-  wire [0:0]LVDS_CLK_clk_n;
-  wire [0:0]LVDS_CLK_clk_p;
-  wire [0:0]init_clk_clk_n;
-  wire [0:0]init_clk_clk_p;
+  wire LVL_TRSL_OE_N;
+  wire init_clk_clk_n;
+  wire init_clk_clk_p;
 
   top_level top_level_i
        (.CHIP_GPIO2(CHIP_GPIO2),
@@ -69,8 +66,7 @@ module top_level_wrapper
         .CHIP_VDDA(CHIP_VDDA),
         .CHIP_VDDIO(CHIP_VDDIO),
         .CHIP_VDDLVDS(CHIP_VDDLVDS),
-        .LVDS_CLK_clk_n(LVDS_CLK_clk_n),
-        .LVDS_CLK_clk_p(LVDS_CLK_clk_p),
+        .LVL_TRSL_OE_N(LVL_TRSL_OE_N),
         .init_clk_clk_n(init_clk_clk_n),
         .init_clk_clk_p(init_clk_clk_p));
 endmodule
