@@ -15,8 +15,8 @@
         "system_ila": ""
       },
       "indy_power_ctl": "",
-      "chip_spi": "",
-      "controller": ""
+      "controller": "",
+      "chip_spi": ""
     },
     "interface_ports": {
       "init_clk": {
@@ -323,6 +323,62 @@
           }
         }
       },
+      "controller": {
+        "vlnv": "xilinx.com:module_ref:controller:1.0",
+        "xci_name": "top_level_controller_0_0",
+        "xci_path": "ip/top_level_controller_0_0/top_level_controller_0_0.xci",
+        "inst_hier_path": "controller",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "resetn_out": {
+            "direction": "O"
+          },
+          "spi_cmd": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "spi_addr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "spi_wdata": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "spi_sim_select": {
+            "direction": "O"
+          },
+          "spi_sim_miso": {
+            "direction": "O"
+          },
+          "spi_busy": {
+            "direction": "I"
+          },
+          "chip_power_ctl": {
+            "direction": "O"
+          },
+          "chip_power_state": {
+            "direction": "I"
+          },
+          "GPIO2": {
+            "direction": "O"
+          },
+          "LVL_TRSL_OE_N": {
+            "direction": "O"
+          }
+        }
+      },
       "chip_spi": {
         "vlnv": "xilinx.com:module_ref:chip_spi:1.0",
         "xci_name": "top_level_chip_spi_0_0",
@@ -336,39 +392,11 @@
         "ports": {
           "hsi_clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "80000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "top_level_clk_wiz_0_0_clk_250",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "200000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "top_level_clk_wiz_0_0_clk_250",
-                "value_src": "default_prop"
-              }
-            }
+            "direction": "I"
           },
           "resetn": {
             "type": "rst",
@@ -437,62 +465,6 @@
           },
           "sim_select": {
             "direction": "I"
-          }
-        }
-      },
-      "controller": {
-        "vlnv": "xilinx.com:module_ref:controller:1.0",
-        "xci_name": "top_level_controller_0_0",
-        "xci_path": "ip/top_level_controller_0_0/top_level_controller_0_0.xci",
-        "inst_hier_path": "controller",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "controller",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "resetn_out": {
-            "direction": "O"
-          },
-          "spi_cmd": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "spi_addr": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "spi_wdata": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "spi_sim_select": {
-            "direction": "O"
-          },
-          "spi_sim_miso": {
-            "direction": "O"
-          },
-          "spi_busy": {
-            "direction": "I"
-          },
-          "chip_power_ctl": {
-            "direction": "O"
-          },
-          "chip_power_state": {
-            "direction": "I"
-          },
-          "GPIO2": {
-            "direction": "O"
-          },
-          "LVL_TRSL_OE_N": {
-            "direction": "O"
           }
         }
       }
@@ -645,8 +617,8 @@
           "system_clocks/clk_250",
           "system_ila/clk",
           "indy_power_ctl/clk",
-          "chip_spi/clk",
-          "controller/clk"
+          "controller/clk",
+          "chip_spi/clk"
         ]
       },
       "system_ila_CHIP_RESET_N": {
